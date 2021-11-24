@@ -60,5 +60,20 @@ for ID in passes:
     a,b = ID.split('\n')
     IDs.append(Decode(a))
     
-print(max(IDs))
+print( 'The bigest Id number is: ', max(IDs))
 
+# Second part
+
+IDs.sort()
+
+i = IDs[0]
+
+for seat in IDs:
+    x = seat - i
+    if x != 0:
+        # print(i)
+        break
+    
+    i += 1
+    
+print( 'My Id seat number is: ', i)
